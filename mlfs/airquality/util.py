@@ -15,7 +15,7 @@ import hopsworks
 import hsfs
 from pathlib import Path
 
-def get_historical_weather(city, start_date,  end_date, latitude, longitude):
+def get_historical_weather(city,street, start_date,  end_date, latitude, longitude):
     # latitude, longitude = get_city_coordinates(city)
 
     # Setup the Open-Meteo API client with cache and retry on error
@@ -63,6 +63,7 @@ def get_historical_weather(city, start_date,  end_date, latitude, longitude):
     daily_dataframe = pd.DataFrame(data = daily_data)
     daily_dataframe = daily_dataframe.dropna()
     daily_dataframe['city'] = city
+    daily_dataframe['street'] = street
     return daily_dataframe
 
 def get_hourly_weather_forecast(city, latitude, longitude):

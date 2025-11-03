@@ -1,0 +1,24 @@
+{
+    "country": "sweden",
+    "city": "lund",
+    "sensors": [
+        {
+            "street": "linåkersvägen",
+            "neighborhood": "vallkärra",
+            "url": "https://api.waqi.info/feed/A415507",
+            "csv_file": "data/linakersvägen-vallkärra.csv"
+        },
+        {
+            "street": "trollebergsvägen",
+            "neighborhood": "lund",
+            "url": "https://api.waqi.info/feed/@10017",
+            "csv_file": "data/lund-trollebergsvägen.csv"
+        },
+        {
+            "street": "bankgatan",
+            "neighborhood": "centrum",
+            "url": "https://api.waqi.info/feed/A530461",
+            "csv_file": "data/bankgatan-centrum.csv"
+        }
+    ]
+}

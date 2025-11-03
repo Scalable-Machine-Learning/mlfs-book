@@ -19,3 +19,4 @@ python-dotenv
 feldera==0.41
 #ipython-secrets
 #keyrings.alt
+papermill==2.6.0

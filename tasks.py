@@ -39,7 +39,8 @@ def aq_clean(c):
 @task
 def aq_backfill(c):
     check_venv()
-    c.run("uv run ipython notebooks/airquality/1_air_quality_feature_backfill.ipynb")
+    #c.run("uv run ipython notebooks/airquality/1_air_quality_feature_backfill.ipynb")
+    c.run("uv mlfs/scripts/backill_all_sensor.py")
 
 @task
 def aq_features(c):
