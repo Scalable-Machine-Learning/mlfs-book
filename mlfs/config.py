@@ -96,13 +96,13 @@ class HopsworksSettings(BaseSettings):
         if not aqicn_city:
             missing.append("AQICN_CITY")
         # 5. AQICN_STREET
-        aqicn_street = self.AQICN_STREET or os.getenv("AQICN_STREET")
-        if not aqicn_street:
-            missing.append("AQICN_STREET")
-        # 6. AQICN_URL
-        aqicn_url = self.AQICN_URL or os.getenv("AQICN_URL")
-        if not aqicn_url:
-            missing.append("AQICN_URL")
+        # aqicn_street = self.AQICN_STREET or os.getenv("AQICN_STREET")
+        # if not aqicn_street:
+        #     missing.append("AQICN_STREET")
+        # # 6. AQICN_URL
+        # aqicn_url = self.AQICN_URL or os.getenv("AQICN_URL")
+        # if not aqicn_url:
+        #     missing.append("AQICN_URL")
 
         if missing:
             raise ValueError(
