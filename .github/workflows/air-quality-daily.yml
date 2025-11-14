@@ -7,7 +7,7 @@ name: air-quality-daily
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # every night at 02:00 UTC
+    - cron: '0 12 * * *'   # 1 PM Sweden time (winter) / 2 PM (summer)
   workflow_dispatch:
 
 jobs:
