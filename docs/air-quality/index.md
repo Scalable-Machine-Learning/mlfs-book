@@ -16,12 +16,13 @@ powered by a [function-calling LLM](https://www.hopsworks.ai/dictionary/function
 
 ![Hindcast](./assets/img/pm25_hindcast_1day.png) -->
 
----
-layout: default
-title: Air Quality Forecast – Lund
----
+
+<!-- layout: default
+title: Air Quality Forecast – Lund -->
 
 # Air Quality Forecast Dashboard – Lund
+
+[Hopsworks Logo](../titanic/assets/img/logo.png)
 
 This dashboard shows **PM2.5 predictions for the next 7** and a **1-day-ahead hindcast** (prediction vs actual)  
 for three sensors in Lund. The data is stored in Hopsworks Feature Store, the model is trained in notebook `3_air_quality_training_pipeline.ipynb`, and the plots are generated daily by `4_air_quality_batch_inference.ipynb` and a GitHub Actions workflow.
