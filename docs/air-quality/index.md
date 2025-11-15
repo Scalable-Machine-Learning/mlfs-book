@@ -44,11 +44,11 @@ Each section below shows the forecast and 1-day-ahead hindcast for that sensor.
 
 ### 7 Day Forecast
 
-![PM2.5 Forecast – Lund Bankgatan](air-quality/assets/img/lund_bankgatan_pm25_forecast.png)
+![PM2.5 Forecast – Lund Bankgatan](./assets/img/lund_bankgatan_pm25_forecast.png)
 
 ### 1-Day-Ahead Hindcast (Prediction vs Actual)
 
-![PM2.5 Hindcast 1 Day – Lund Bankgatan](air-quality/assets/img/lund_bankgatan_pm25_hindcast_1day.png)
+![PM2.5 Hindcast 1 Day – Lund Bankgatan](./assets/img/img/lund_bankgatan_pm25_hindcast_1day.png)
 
 ---
 
@@ -56,11 +56,11 @@ Each section below shows the forecast and 1-day-ahead hindcast for that sensor.
 
 ### 7 Day Forecast
 
-![PM2.5 Forecast – Lund Linåkersvägen](air-quality/assets/img/lund_linåkersvägen_pm25_forecast.png)
+![PM2.5 Forecast – Lund Linåkersvägen](./assets/img/lund_linåkersvägen_pm25_forecast.png)
 
 ### 1-Day-Ahead Hindcast (Prediction vs Actual)
 
-![PM2.5 Hindcast 1 Day – Lund Linåkersvägen](air-quality/assets/img/lund_linåkersvägen_pm25_hindcast_1day.png)
+![PM2.5 Hindcast 1 Day – Lund Linåkersvägen](./assets/img/lund_linåkersvägen_pm25_hindcast_1day.png)
 
 ---
 
@@ -68,11 +68,11 @@ Each section below shows the forecast and 1-day-ahead hindcast for that sensor.
 
 ### 7 Day Forecast
 
-![PM2.5 Forecast – Lund Trollebergsvägen](air-quality/assets/img/lund_trollebergsvägen_pm25_forecast.png)
+![PM2.5 Forecast – Lund Trollebergsvägen](./assets/img/lund_trollebergsvägen_pm25_forecast.png)
 
 ### 1-Day-Ahead Hindcast (Prediction vs Actual)
 
-![PM2.5 Hindcast 1 Day – Lund Trollebergsvägen](air-quality/assets/img/lund_trollebergsvägen_pm25_hindcast_1day.png)
+![PM2.5 Hindcast 1 Day – Lund Trollebergsvägen](./assets/img/lund_trollebergsvägen_pm25_hindcast_1day.png)
 
 
 ---
