@@ -76,11 +76,12 @@ def get_hourly_weather_forecast(city, latitude, longitude):
 
     # Make sure all required weather variables are listed here
     # The order of variables in hourly or daily is important to assign them correctly below
-    url = "https://api.open-meteo.com/v1/ecmwf"
+    url = "https://api.open-meteo.com/v1/forecast"
     params = {
         "latitude": latitude,
         "longitude": longitude,
-        "hourly": ["temperature_2m", "precipitation", "wind_speed_10m", "wind_direction_10m"]
+        "hourly": ["temperature_2m", "precipitation", "wind_speed_10m", "wind_direction_10m"],
+        "forecast_days": 8  # Request 8 days of forecast (today + 7 days ahead)
     }
     responses = openmeteo.weather_api(url, params=params)
 
@@ -99,19 +100,35 @@ def get_hourly_weather_forecast(city, latitude, longitude):
     hourly_wind_speed_10m = hourly.Variables(2).ValuesAsNumpy()
     hourly_wind_direction_10m = hourly.Variables(3).ValuesAsNumpy()
 
+    # Debug: Print the time range from the API
+    start_time = pd.to_datetime(hourly.Time(), unit = "s")
+    end_time = pd.to_datetime(hourly.TimeEnd(), unit = "s")
+    print(f"API returned hourly data from: {start_time} to {end_time}")
+    print(f"Total hours from time range: {(end_time - start_time).total_seconds() / 3600}")
+    print(f"Number of data points from API: {len(hourly_temperature_2m)}")
+
     hourly_data = {"date": pd.date_range(
-        start = pd.to_datetime(hourly.Time(), unit = "s"),
-        end = pd.to_datetime(hourly.TimeEnd(), unit = "s"),
+        start = start_time,
+        end = end_time,
         freq = pd.Timedelta(seconds = hourly.Interval()),
         inclusive = "left"
     )}
+
+    print(f"Date range created: {len(hourly_data['date'])} timestamps")
+
     hourly_data["temperature_2m_mean"] = hourly_temperature_2m
     hourly_data["precipitation_sum"] = hourly_precipitation
     hourly_data["wind_speed_10m_max"] = hourly_wind_speed_10m
     hourly_data["wind_direction_10m_dominant"] = hourly_wind_direction_10m
 
     hourly_dataframe = pd.DataFrame(data = hourly_data)
+    print(f"DataFrame has {len(hourly_dataframe)} hourly rows")
+    print(f"Date range in DataFrame: {hourly_dataframe['date'].min()} to {hourly_dataframe['date'].max()}")
+
     hourly_dataframe = hourly_dataframe.dropna()
+    print(f"After dropna: {len(hourly_dataframe)} rows")
+    print(f"Unique days: {hourly_dataframe['date'].dt.date.nunique()}")
+
     return hourly_dataframe
 
 
