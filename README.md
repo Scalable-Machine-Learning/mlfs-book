@@ -277,7 +277,7 @@ All plots are generated daily by the batch inference notebook and saved under
 # Running the System Locally
 
 ```bash
-export HOPSWORKS_API_KEY=your_key
+export HOPSWORKS_API_KEY=API KEY
 
 make aq-backfill       # Notebook 1 — historical data
 make aq-feature        # Notebook 2 — daily features
