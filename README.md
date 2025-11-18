@@ -88,12 +88,14 @@ The system predicts upcoming PM2.5 concentrations by combining:
 - A 3-day rolling PM2.5 average   
 - Feature Store–managed time-series data
 
-### Sensors Included
+### Sensors 
 
+| Sensor   | Country | City | Street           |
+|----------|---------|------|------------------|
+| Sensor1  | Sweden  | Lund | bankgatan        |
+| Sensor2  | Sweden  | Lund | linåkersvägen    |
+| Sensor3  | Sweden  | Lund | trollebergsvägen |
 
-Sensor1: { "country": "Sweden", "city": "Lund", "street": "bankgatan" }
-Sensor2: { "country": "Sweden", "city": "Lund", "street": "linåkersvägen" }
-Sensor3: { "country": "Sweden", "city": "Lund", "street": "trollebergsvägen" }
 
 
 ## Hopsworks features
