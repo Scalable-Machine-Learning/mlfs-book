@@ -59,7 +59,7 @@ This project implements a complete end-to-end ML system that forecasts PM2.5 lev
 - Compute lag-1, lag-2, lag-3 PM2.5 features  
 - Build feature groups + feature views in Hopsworks  
 - Train and register ML model on historical data   
-- Run daily feature update and batch inference  
+- Run nightly feature update and batch inference  
 - Publish visualisations to GitHub Pages  
 
 ## Repository Structure
@@ -87,4 +87,48 @@ The system predicts upcoming PM2.5 concentrations by combining:
 - 3 lag features (lag-1, lag-2, lag-3)  
 - A 3-day rolling PM2.5 average   
 - Feature Store–managed time-series data
+
+### Sensors Included
+
+{
+"Sensor1": { "country": "Sweden", "city": "Lund", "street": "bankgatan" },
+"Sensor2": { "country": "Sweden", "city": "Lund", "street": "linåkersvägen" },
+"Sensor3": { "country": "Sweden", "city": "Lund", "street": "trollebergsvägen" }
+}
+
+## Hopsworks features
+
+### weather
+columns:
+date                        - timestamp
+temperature_2m_mean         - float
+precipitation_sum           - float
+wind_speed_10m_max          - float
+wind_direction_10m_dominant - float
+city                        - string
+
+### air_quality
+columns:
+date          - timestamp
+pm25          - float
+country       - string
+street        - string
+url           - sring
+city          - string
+pm25_3day_avg - float
+pm25_lag_1day - float
+pm25_lag_2day - float
+pm25_lag_3day - float
+
+### aq_predictions
+columns:
+country                     - string
+street                      - string
+city                        - string
+days_before_forecast_day    - bigint
+predicted_pm25              - float
+wind_direction_10m_dominant - float
+wind_speed_10m_max          - float
+precipitation_sum           - float
+temperature_2m_mean         - float
 
