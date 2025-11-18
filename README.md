@@ -91,8 +91,8 @@ The system predicts upcoming PM2.5 concentrations by combining:
 ### Sensors Included
 
 
-Sensor1: { "country": "Sweden", "city": "Lund", "street": "bankgatan" },
-Sensor2: { "country": "Sweden", "city": "Lund", "street": "linåkersvägen" },
+Sensor1: { "country": "Sweden", "city": "Lund", "street": "bankgatan" }
+Sensor2: { "country": "Sweden", "city": "Lund", "street": "linåkersvägen" }
 Sensor3: { "country": "Sweden", "city": "Lund", "street": "trollebergsvägen" }
 
 
