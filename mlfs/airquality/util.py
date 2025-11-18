@@ -82,6 +82,7 @@ def get_hourly_weather_forecast(city, latitude, longitude):
         "longitude": longitude,
         "hourly": ["temperature_2m", "precipitation", "wind_speed_10m", "wind_direction_10m"],
         "forecast_days": 8  # Request 8 days of forecast (today + 7 days ahead)
+
     }
     responses = openmeteo.weather_api(url, params=params)
 
