@@ -52,7 +52,7 @@ aq-clean:
 	python mlfs/clean_hopsworks_resources.py aq
 
 aq-features:
-	ipython notebooks/airquality/1_air_quality_feature_backfill.ipynb
+	python mlfs/scripts/backfill_all_sensor.py
 
 aq-train:
 	ipython notebooks/airquality/3_air_quality_training_pipeline.ipynb
