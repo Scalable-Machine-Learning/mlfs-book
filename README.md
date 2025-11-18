@@ -48,6 +48,9 @@ docker run -p 8080:8080 \
   --tty --rm -it ghcr.io/feldera/pipeline-manager:latest
  -->
 
+Contributors:
+Ramin Darudi         - rdarudi@kth.se
+Sebastian Schmülling - schmul@kth.se
 
 # Air Quality Forecasting with Hopsworks Feature Store  
 **Daily PM2.5 predictions using weather forecasts, lagged air-quality data, and an automated MLOps pipeline**
