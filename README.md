@@ -48,7 +48,7 @@ docker run -p 8080:8080 \
   --tty --rm -it ghcr.io/feldera/pipeline-manager:latest
  -->
 
-Contributors:
+## Contributors:
 Ramin Darudi         - rdarudi@kth.se
 Sebastian Schmülling - schmul@kth.se
 
